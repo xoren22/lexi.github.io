@@ -6,35 +6,29 @@
 <title>Text Sorter with Copy Feature</title>
 <script>
 function sortLines() {
-  // Get text from input textarea
   let text = document.getElementById("inputText").value;
-  // Split text into lines, sort them, then join back into a string
   let sortedText = text.split('\n').sort().join('\n');
-  // Display sorted text in output textarea
   document.getElementById("outputText").value = sortedText;
 }
 
 function copyToClipboard() {
-  // Get the output textarea
   let outputText = document.getElementById("outputText");
-  // Select the text
   outputText.select();
   outputText.setSelectionRange(0, 99999); // For mobile devices
-  // Copy the selected text
   document.execCommand("copy");
 }
 </script>
 </head>
 <body>
 
-<h2>Text Line Sorter</h2>
+<h2>Այբենական Դասավորող</h2>
 
-<textarea id="inputText" rows="10" cols="50" placeholder="Enter your text here..."></textarea><br>
+<textarea id="inputText" rows="10" cols="50" placeholder="Ներմուծեք տեքստը այստեղ..."></textarea><br>
 <button onclick="sortLines()">Sort Lines</button>
 
-<h3>Sorted Text:</h3>
+<h3>Դասավորված տողերը</h3>
 <textarea id="outputText" rows="10" cols="50" placeholder="Sorted text will appear here..."></textarea><br>
-<button onclick="copyToClipboard()">Copy Sorted Text</button>
+<button onclick="copyToClipboard()">Կրկնօրինակել տեքստը</button>
 
 </body>
 </html>
